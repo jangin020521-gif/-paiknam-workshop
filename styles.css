@@ -1,6 +1,5 @@
 /* =========================================================
    백남학술정보관 이용자 교육 — 공용 스타일시트
-   6개 페이지가 이 파일 하나를 함께 씁니다.
    ========================================================= */
 
 /* =========================================================
@@ -400,10 +399,6 @@ details summary{list-style:none}
   background:rgba(0,0,0,.08); border-radius:9999px;
   padding:5px 14px;
 }
-.pg-tagline{
-  font-size:clamp(17px,2.3vw,21px); font-weight:700;
-  letter-spacing:-.025em; line-height:1.5;
-}
 .pg-ask{
   margin:22px 0 26px; display:flex; flex-direction:column; gap:9px;
   border-left:3px solid rgba(0,0,0,.28); padding-left:18px;
@@ -414,6 +409,21 @@ details summary{list-style:none}
 }
 .pg-ask li::before{ content:"\201C"; margin-right:2px; }
 .pg-ask li::after{ content:"\201D"; margin-left:2px; }
+.pg-sub{
+  margin-top:10px; font-size:clamp(19px,2.6vw,24px); font-weight:800;
+  letter-spacing:-.025em; line-height:1.35;
+}
+.pg-facts{
+  margin-top:26px; padding-top:20px; border-top:1px solid rgba(0,0,0,.14);
+  display:grid; gap:16px clamp(20px,4vw,48px);
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+}
+.pg-facts dt{ font-size:11.5px; font-weight:700; letter-spacing:.14em; color:rgba(0,0,0,.45); }
+.pg-facts dd{ margin:6px 0 0; font-size:15.5px; font-weight:700; letter-spacing:-.02em; }
+.pg-facts dd em{
+  display:block; margin-top:3px; font-style:normal;
+  font-size:13px; font-weight:500; color:rgba(0,0,0,.5);
+}
 /* =========================================================
    SECTION 02 · 교육 내용 및 일정
    ========================================================= */
@@ -650,6 +660,23 @@ details summary{list-style:none}
 @media (max-width:560px){
   .lu-info{ padding:24px 22px 22px; }
 }
+.tutor__round{
+  margin-top:34px; font-size:12px; font-weight:700; letter-spacing:.14em;
+  color:rgba(0,0,0,.45);
+}
+.tutor__round + .tutor{ margin-top:12px; }
+.tutor__photo{
+  flex:none; width:clamp(56px,8vw,74px); aspect-ratio:1/1;
+  border-radius:9999px; overflow:hidden;
+  background:rgba(0,0,0,.07); display:grid; place-items:center;
+}
+.tutor__photo span{
+  font-size:9px; font-weight:700; letter-spacing:.16em; color:rgba(0,0,0,.3);
+}
+.tutor__photo img{ width:100%; height:100%; object-fit:cover; object-position:center; }
+.tutor__proj p em{
+  font-style:normal; font-size:.88em; color:rgba(0,0,0,.42); margin-left:5px;
+}
 /* =========================================================
    SECTION 04 · 신청 경로 & QR
    ========================================================= */
@@ -696,8 +723,24 @@ details summary{list-style:none}
 .apply-route__link:hover{ transform:translateY(-2px); background:#000; }
 .apply-route__link svg{ width:15px; height:15px; }
 /* 수령 조건 */
-.goods-cond{
-  margin-top:18px; padding-top:14px;
-  border-top:1px solid rgba(0,0,0,.1);
-  font-size:13.5px; font-weight:700; letter-spacing:-.01em;
+
+/* 굿즈 머리말 */
+.gd-kicker{
+  font-size:12px; font-weight:800; letter-spacing:.22em;
+  color:rgba(0,0,0,.42);
 }
+.gd-title{
+  margin-top:10px; font-size:clamp(28px,4.6vw,42px); font-weight:800;
+  letter-spacing:-.035em; line-height:1.15;
+}
+.gd-lead{
+  margin-top:14px; font-size:clamp(16px,2.2vw,19px); font-weight:700;
+  letter-spacing:-.02em; color:rgba(0,0,0,.72);
+}
+.gd-note{
+  margin-top:10px; display:inline-block;
+  font-size:13px; font-weight:700;
+  background:rgba(0,0,0,.08); border-radius:9999px; padding:6px 14px;
+}
+.gd-rank{ font-size:11.5px; font-weight:700; letter-spacing:.16em; color:rgba(0,0,0,.42); }
+.gd-rank strong{ font-size:14px; font-weight:800; letter-spacing:-.01em; color:#141414; margin-left:4px; }
