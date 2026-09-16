@@ -1,6 +1,0 @@
-# 모든 검색엔진에 전체 페이지 공개
-User-agent: *
-Allow: /
-
-# 사이트맵 위치 — 아래 주소를 실제 도메인으로 바꿔 주세요
-Sitemap: https://example.vercel.app/sitemap.xml
