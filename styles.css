@@ -722,6 +722,11 @@ details summary{list-style:none}
 }
 .apply-route__link:hover{ transform:translateY(-2px); background:#000; }
 .apply-route__link svg{ width:15px; height:15px; }
+.apply-route__intro{
+  margin-top:26px; font-size:15.5px; font-weight:600;
+  letter-spacing:-.02em; color:rgba(0,0,0,.6);
+}
+.apply-route__intro + .apply-route{ margin-top:14px; }
 /* 수령 조건 */
 
 /* 굿즈 머리말 */
